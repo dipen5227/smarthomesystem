@@ -1,5 +1,8 @@
 package com.medaviebluecross.coding;
 
+// Interface defining a general Appliance behavior
 interface Appliance {
-	 void turnOffAppliance();
+
+    // Method signature for turning off the appliance
+    void turnOffAppliance();
 }

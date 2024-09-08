@@ -6,22 +6,24 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class CodingApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(CodingApplication.class, args);
-		
-		Light light = new Light();
+    // The main method to start the Spring Boot application
+    public static void main(String[] args) {
+        SpringApplication.run(CodingApplication.class, args);
+        
+        // Creating instances of appliances: Light, Fan, and Air Conditioner
+        Light light = new Light();
         Fan fan = new Fan();
         AirConditioner ac = new AirConditioner();
         
+        // Toggling the light switch, setting fan speed, and changing AC mode
         light.toggleLightSwitch();
-        fan.setFanSpeed(2);
-        ac.setACThermostateMode("fan");
+        fan.setFanSpeed(2); // Set fan speed to 2
+        ac.setACThermostateMode("fan"); // Set AC mode to "fan"
         
-        Appliance[] allAppliances = {light,fan,ac};
+        // Storing all appliances in an array
+        Appliance[] allAppliances = {light, fan, ac};
         
+        // Creating a system update task for all appliances
         SystemUpdate updateTask = new SystemUpdate(allAppliances);
-        
-        
-	}
-
+    }
 }

@@ -1,1 +1,1 @@
-# smarthomesystem
+# SmartHomeSystem
